@@ -36,19 +36,19 @@ app.get('/location', (request,response) => {
     response.send(locationData);
   }
   catch(error) {
-    errorHandler('So sorry, something went wrong.', request, response);
+    errorHandler('No location data for you!', request, response);
   }
 });
 
 app.get('/weather', (request,response) => {
   try {
     const weatherData = require('./data/darksky.json');
-    const city = request.query.data;
-    const forecast = new Weather(city,weatherData);
-    response.send(forecast);
+    // Credit for next 2 lines: Travis Skyles and David Vloedman
+    const days = parseWeather(weatherData);
+    response.send(days);
   }
   catch(error) {
-    errorHandler('So sorry, something went wrong.', request, response);
+    errorHandler('No weather data for you!', request, response);
   }
 });
 
@@ -57,6 +57,16 @@ app.use(errorHandler);
 
 // HELPER FUNCTIONS
 
+// Credit: Travis Skyles and David Vloedman
+const parseWeather = weatherJSON => {
+  const data = Object.values(weatherJSON.daily.data);
+  const weatherDays = [];
+  data.forEach(day => {
+    weatherDays.push(new Weather(new Date(day.time*1000).toDateString(), day.summary));
+  })
+  return weatherDays;
+}
+
 function Location(city, geoData) {
   this.search_query = city;
   this.formatted_query = geoData.results[0].formatted_address;
@@ -64,22 +74,18 @@ function Location(city, geoData) {
   this.longitude = geoData.results[0].geometry.location.lng;
 }
 
-function Weather(city, weatherData) {
-  this.search_query = city;i
-  this.time = weatherData.results[2].daily.time;
-  this.summary = weatherData.results[2].daily.summary;
+function Weather(day, forecast) {
+  this.time = day;
+  this.forecast = forecast;
 }
 
-
-function  notFoundHandler(request,response) {
+function notFoundHandler(request,response) {
   response.status(404).send('huh?');
 }
 
 function errorHandler(error,request,response) {
   response.status(500).send(error);
 }
-
-
 
 // Make sure the server is listening for requests
 app.listen(PORT, () => console.log(`App is listening on ${PORT}`) );
