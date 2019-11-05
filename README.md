@@ -33,10 +33,10 @@ Finish time: 08:00 PM
 Actual time needed to complete: 30 minutes
 
 Number and name of feature: Feature #2 Locations
-Estimate of time needed to complete: 
-Start time: 
-Finish time: 
-Actual time needed to complete: 
+Estimate of time needed to complete: 30 minutes
+Start time: 08:30 AM
+Finish time: 08:40 AM
+Actual time needed to complete: 10 minutes
 
 
 Number and name of feature: Feature #3 Weather

@@ -40,6 +40,18 @@ app.get('/location', (request,response) => {
   }
 });
 
+app.get('/weather', (request,response) => {
+  try {
+    const weatherData = require('./data/darksky.json');
+    const city = request.query.data;
+    const forecast = new Weather(city,weatherData);
+    response.send(forecast);
+  }
+  catch(error) {
+    errorHandler('So sorry, something went wrong.', request, response);
+  }
+});
+
 app.use('*', notFoundHandler);
 app.use(errorHandler);
 
@@ -52,6 +64,11 @@ function Location(city, geoData) {
   this.longitude = geoData.results[0].geometry.location.lng;
 }
 
+function Weather(city, weatherData) {
+  this.search_query = city;i
+  this.time = weatherData.results[2].daily.time;
+  this.summary = weatherData.results[2].daily.summary;
+}
 
 
 function  notFoundHandler(request,response) {
