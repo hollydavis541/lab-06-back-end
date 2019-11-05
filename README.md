@@ -24,6 +24,8 @@ This is a Node.js server that uses express, dotenv, and cors packages. The serve
 11-04-2019 08:40 AM - Location map showing on front end
 
 11-04-2019 11:00 AM - 8-day forecast showing on front end
+
+11-04-2019 11:40 AM - Confirmed error handler
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource.-->
@@ -53,7 +55,7 @@ Actual time needed to complete: 2 hours
 
 
 Number and name of feature: Feature #4 Error
-Estimate of time needed to complete: 
-Start time: 
-Finish time: 
-Actual time needed to complete: 
+Estimate of time needed to complete:  15 minutes
+Start time: 11:30 AM
+Finish time: 11:40 AM
+Actual time needed to complete: 10 minutes
