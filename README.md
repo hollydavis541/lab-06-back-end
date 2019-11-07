@@ -58,4 +58,4 @@ Number and name of feature: Feature #4 Error
 Estimate of time needed to complete:  15 minutes
 Start time: 11:30 AM
 Finish time: 11:40 AM
-Actual time needed to complete: 10 minutes
+Actual time needed to complete: 10 minutes 
