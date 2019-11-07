@@ -5,7 +5,7 @@
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
 
 ## Overview
-Creates a node.js server that connects to APIs that provide weather, events, restaurants, and movie showing information to the [City Explorer site](city-explorer-code301.netlify.com). 
+Creates a node.js server that connects to APIs that provide weather, events, restaurants, and movie showing information to the [City Explorer site](https://city-explorer-code301.netlify.com/). 
 
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
@@ -21,7 +21,7 @@ WEATHER_API_KEY = "[your api goes here]"
 EVENT_API_KEY = "[your api goes here]"
 5. Confirm that node is installed: $ node -v (if not installed, do so)
 6. To start your server: $ nodemon
-7. Go to [City Explorer site](city-explorer-code301.netlify.com) and enter "http://localhost:3000" in the text entry field. Search for a city and you should see the location and weather information. 
+7. Go to [City Explorer site](https://city-explorer-code301.netlify.com/) and enter "http://localhost:3000" in the text entry field. Search for a city and you should see the location and weather information. 
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
