@@ -3,7 +3,7 @@
 **Author**: Holly Davis, Matt Stewart, Natalie Alway
 **Version**: 1.3.0
 <!-- (increment the patch/fix version number if you make more commits past your first submission) -->
-
+ 
 ## Overview
 Create a node.js server that connects to APIs that provide weather, events, restaurants, and movie showing information to the City Explorer site. 
 
